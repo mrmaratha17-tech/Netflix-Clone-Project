@@ -1,0 +1,877 @@
+HTML------------------!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+<nav>
+
+<div class="logo">
+NETFLIX
+</div>
+
+<div class="nav-buttons">
+
+<select class="language">
+<option>English</option>
+<option>Hindi</option>
+<option>French</option>
+</select>
+
+<button class="signin-btn"
+onclick="document.getElementById('loginSection').scrollIntoView({behavior:'smooth'})">
+Sign In
+</button>
+
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1>
+Unlimited movies, TV shows and more
+</h1>
+
+<h3>
+Watch anywhere. Cancel anytime.
+</h3>
+
+<p>
+Ready to watch? Enter your email to create or restart your membership.
+</p>
+
+<div class="email-box">
+
+<input
+type="email"
+id="memberEmail"
+placeholder="Email Address">
+
+<button onclick="startMembership()">
+Get Started >
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- TRENDING -->
+
+<section class="trending">
+
+<h2>Trending Now</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Movies"
+onkeyup="searchMovie()"
+style="padding:10px;margin-bottom:20px;width:300px;">
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="money heist.png" alt="Money Heist">
+<h3>Money Heist</h3>
+</div>
+
+<div class="movie-card">
+<img src="stranger things.jpg" alt="Stranger Things">
+<h3>Stranger Things</h3>
+</div>
+
+<div class="movie-card">
+<img src="squid game.jpg" alt="Squid Game">
+<h3>Squid Game</h3>
+</div>
+
+<div class="movie-card">
+<img src="wednesday.jpg" alt="Wednesday">
+<h3>Wednesday</h3>
+</div>
+
+<div class="movie-card">
+<img src="dark.jpg" alt="Dark">
+<h3>Dark</h3>
+</div>
+
+<div class="movie-card">
+<img src="lucifer.jpg" alt="Lucifer">
+<h3>Lucifer</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- MORE REASONS -->
+
+<section class="reasons">
+
+<h2>More Reasons To Join</h2>
+
+<div class="reason-grid">
+
+<div class="reason-card">
+<h3>Enjoy on your TV</h3>
+<p>Watch on Smart TVs, PlayStation, Xbox and more.</p>
+</div>
+
+<div class="reason-card">
+<h3>Download Shows</h3>
+<p>Save your favourites easily.</p>
+</div>
+
+<div class="reason-card">
+<h3>Watch Everywhere</h3>
+<p>Stream on mobile, tablet, laptop and TV.</p>
+</div>
+
+<div class="reason-card">
+<h3>Create Profiles</h3>
+<p>Kids and adults can enjoy separately.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<button class="faq-question">What is Netflix?</button>
+<div class="faq-answer">
+Netflix is a streaming service that offers movies and TV shows.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">How much does Netflix cost?</button>
+<div class="faq-answer">
+Plans range from ₹149 to ₹649 per month.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Where can I watch?</button>
+<div class="faq-answer">
+Watch anywhere on mobile, TV or laptop.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Can I cancel anytime?</button>
+<div class="faq-answer">
+Yes. There are no cancellation fees.
+</div>
+</div>
+
+</section>
+
+<!-- LOGIN SECTION -->
+
+<section id="loginSection"
+class="login-page">
+
+<div class="login-box">
+
+<h1>Sign In</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+Sign In
+</button>
+
+<p style="margin-top:20px;">
+Demo Login Page
+</p>
+
+</div>
+
+</section>
+
+<!-- PLANS SECTION -->
+
+<section class="plans">
+
+<h2>Choose Your Plan</h2>
+
+<div class="plan-container">
+
+<div class="plan-card">
+<h2>Mobile</h2>
+<p>₹149 / Month</p>
+<p>480p Quality</p>
+<p>1 Mobile Device</p>
+<button onclick="selectPlan('Mobile')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Basic</h2>
+<p>₹199 / Month</p>
+<p>720p HD Quality</p>
+<p>1 Device</p>
+<button onclick="selectPlan('Basic')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Standard</h2>
+<p>₹499 / Month</p>
+<p>1080p Full HD</p>
+<p>2 Devices</p>
+<button onclick="selectPlan('Standard')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Premium</h2>
+<p>₹649 / Month</p>
+<p>4K + HDR</p>
+<p>4 Devices</p>
+<button onclick="selectPlan('Premium')">
+Subscribe
+</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>Questions? Contact Us</h3>
+
+<div class="footer-links">
+
+<a href="#">Help Centre</a>
+<a href="#">Account</a>
+<a href="#">Media Centre</a>
+<a href="#">Investor Relations</a>
+<a href="#">Jobs</a>
+<a href="#">Terms of Use</a>
+<a href="#">Privacy</a>
+<a href="#">Contact Us</a>
+
+</div>
+
+<p>
+Netflix Clone Project<br>
+Customer Support: +91 123 456 7890<br>
+Email: support@netflixclone.com<br>
+&copy; 2024 Netflix Clone. All rights reserved.
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+CSS ----------------------!
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+/* HEADER */
+
+.header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),
+rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+background-size:cover;
+background-position:center;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.logo{
+font-size:40px;
+font-weight:bold;
+color:#e50914;
+}
+
+.nav-buttons{
+display:flex;
+gap:10px;
+}
+
+.language{
+padding:10px;
+background:black;
+color:white;
+border:1px solid white;
+border-radius:5px;
+}
+
+.signin-btn{
+background:#e50914;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+height:80vh;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+max-width:800px;
+margin-bottom:20px;
+}
+
+.hero h3{
+font-size:25px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.email-box{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.email-box input{
+padding:15px;
+width:350px;
+border:none;
+border-radius:5px;
+}
+
+.email-box button{
+padding:15px 25px;
+background:#e50914;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* TRENDING */
+
+.trending{
+padding:60px;
+}
+
+.trending h2{
+margin-bottom:20px;
+}
+
+.movie-row{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.movie-card{
+min-width:200px;
+text-align:center;
+}
+
+.movie-card img{
+width:200px;
+height:300px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.movie-card img:hover{
+transform:scale(1.08);
+}
+
+.movie-card h3{
+margin-top:10px;
+}
+
+/* REASONS */
+
+.reasons{
+padding:60px;
+}
+
+.reasons h2{
+margin-bottom:30px;
+}
+
+.reason-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.reason-card{
+background:#111;
+padding:25px;
+border-radius:10px;
+}
+
+.reason-card h3{
+color:#e50914;
+margin-bottom:10px;
+}
+
+/* FAQ */
+
+.faq{
+padding:60px;
+}
+
+.faq h2{
+margin-bottom:30px;
+}
+
+.faq-item{
+margin-bottom:10px;
+}
+
+.faq-question{
+width:100%;
+background:#303030;
+color:white;
+border:none;
+padding:20px;
+font-size:18px;
+text-align:left;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+background:#444;
+padding:20px;
+font-size:16px;
+}
+
+/* PLANS */
+
+.plans{
+padding:60px;
+text-align:center;
+}
+
+.plan-btn{
+background:#e50914;
+padding:15px 30px;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px;
+background:#111;
+}
+
+footer h3{
+margin-bottom:20px;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:#b3b3b3;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+text-decoration:underline;
+}
+
+footer p{
+margin-top:20px;
+color:#999;
+}
+
+/* LOGIN PAGE */
+
+.login-page{
+background:#000;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+background:#111;
+padding:40px;
+width:350px;
+border-radius:10px;
+}
+
+.login-box h1{
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+background:#e50914;
+color:white;
+border:none;
+border-radius:5px;
+margin-top:10px;
+}
+
+/* SUBSCRIPTION PAGE */
+
+.plan-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:60px;
+}
+
+.plan-card{
+background:#111;
+padding:30px;
+width:250px;
+border-radius:10px;
+text-align:center;
+}
+
+.plan-card h2{
+color:#e50914;
+margin-bottom:15px;
+}
+
+.plan-card p{
+margin:10px 0;
+}
+
+.plan-card button{
+margin-top:15px;
+background:#e50914;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:15px;
+}
+
+.logo{
+font-size:30px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero h3{
+font-size:20px;
+}
+
+.email-box input{
+width:100%;
+}
+
+.trending,
+.reasons,
+.faq,
+.plans{
+padding:30px;
+}
+
+.movie-card img{
+width:150px;
+height:220px;
+}
+
+JSCRIPT---------------!
+Js
+
+
+// FAQ ACCORDION
+
+const faqQuestions =
+document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(question => {
+
+question.addEventListener("click", () => {
+
+const answer =
+question.nextElementSibling;
+
+if(answer.style.display === "block"){
+
+answer.style.display = "none";
+
+}
+else{
+
+document.querySelectorAll(".faq-answer")
+.forEach(item => {
+
+item.style.display = "none";
+
+});
+
+answer.style.display = "block";
+
+}
+
+});
+
+});
+
+
+// LOGIN FUNCTION
+
+function login(){
+
+let email =
+document.getElementById("email").value;
+
+let password =
+document.getElementById("password").value;
+
+if(email === "" || password === ""){
+
+alert("Please enter Email and Password");
+
+return;
+
+}
+
+localStorage.setItem("userEmail", email);
+
+alert("Login Successful!");
+
+window.location.href = "index.html";
+
+}
+
+
+// LOGOUT FUNCTION
+
+function logout(){
+
+localStorage.removeItem("userEmail");
+
+alert("Logged Out Successfully");
+
+window.location.href = "login.html";
+
+}
+
+
+// SUBSCRIPTION PLAN
+
+function selectPlan(planName){
+
+localStorage.setItem(
+"selectedPlan",
+planName
+);
+
+alert(
+"You selected " +
+planName +
+" Plan"
+);
+
+}
+
+
+// MOVIE SEARCH
+
+function searchMovie(){
+
+let input =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+let movies =
+document.querySelectorAll(".movie-card");
+
+movies.forEach(movie => {
+
+let movieName =
+movie.innerText.toLowerCase();
+
+if(movieName.includes(input)){
+
+movie.style.display = "block";
+
+}
+else{
+
+movie.style.display = "none";
+
+}
+
+});
+
+}
+
+
+// CHECK LOGIN STATUS
+
+window.onload = function(){
+
+let user =
+localStorage.getItem("userEmail");
+
+if(user){
+
+console.log(
+"Logged In User: " + user
+);
+
+}
+
+};
+
+
+// EMAIL SUBSCRIPTION
+
+function startMembership(){
+
+let email =
+document.getElementById("memberEmail")
+.value;
+
+if(email === ""){
+
+alert("Enter Email Address");
+
+return;
+
+}
+
+localStorage.setItem(
+"memberEmail",
+email
+);
+
+alert(
+"Membership Started for: " +
+email
+);
+
+}
+
+
+// DEMO PLAY MOVIE
+
+function playMovie(movieName){
+
+alert(
+"Now Playing: " +
+movieName
+);
+
+}
+
+
+// TRENDING MOVIE CLICK
+
+const movieCards =
+document.querySelectorAll(".movie-card");
+
+movieCards.forEach(card => {
+
+card.addEventListener("click", () => {
+
+let movieTitle =
+card.innerText;
+
+playMovie(movieTitle);
+
+});
