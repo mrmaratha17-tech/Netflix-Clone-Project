@@ -1,0 +1,370 @@
+CSS ----------------------!
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+/* HEADER */
+
+.header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),
+rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+background-size:cover;
+background-position:center;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.logo{
+font-size:40px;
+font-weight:bold;
+color:#e50914;
+}
+
+.nav-buttons{
+display:flex;
+gap:10px;
+}
+
+.language{
+padding:10px;
+background:black;
+color:white;
+border:1px solid white;
+border-radius:5px;
+}
+
+.signin-btn{
+background:#e50914;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+height:80vh;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+max-width:800px;
+margin-bottom:20px;
+}
+
+.hero h3{
+font-size:25px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.email-box{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.email-box input{
+padding:15px;
+width:350px;
+border:none;
+border-radius:5px;
+}
+
+.email-box button{
+padding:15px 25px;
+background:#e50914;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* TRENDING */
+
+.trending{
+padding:60px;
+}
+
+.trending h2{
+margin-bottom:20px;
+}
+
+.movie-row{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.movie-card{
+min-width:200px;
+text-align:center;
+}
+
+.movie-card img{
+width:200px;
+height:300px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.movie-card img:hover{
+transform:scale(1.08);
+}
+
+.movie-card h3{
+margin-top:10px;
+}
+
+/* REASONS */
+
+.reasons{
+padding:60px;
+}
+
+.reasons h2{
+margin-bottom:30px;
+}
+
+.reason-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.reason-card{
+background:#111;
+padding:25px;
+border-radius:10px;
+}
+
+.reason-card h3{
+color:#e50914;
+margin-bottom:10px;
+}
+
+/* FAQ */
+
+.faq{
+padding:60px;
+}
+
+.faq h2{
+margin-bottom:30px;
+}
+
+.faq-item{
+margin-bottom:10px;
+}
+
+.faq-question{
+width:100%;
+background:#303030;
+color:white;
+border:none;
+padding:20px;
+font-size:18px;
+text-align:left;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+background:#444;
+padding:20px;
+font-size:16px;
+}
+
+/* PLANS */
+
+.plans{
+padding:60px;
+text-align:center;
+}
+
+.plan-btn{
+background:#e50914;
+padding:15px 30px;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+padding:50px;
+background:#111;
+}
+
+footer h3{
+margin-bottom:20px;
+}
+
+.footer-links{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:#b3b3b3;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+text-decoration:underline;
+}
+
+footer p{
+margin-top:20px;
+color:#999;
+}
+
+/* LOGIN PAGE */
+
+.login-page{
+background:#000;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-box{
+background:#111;
+padding:40px;
+width:350px;
+border-radius:10px;
+}
+
+.login-box h1{
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+background:#e50914;
+color:white;
+border:none;
+border-radius:5px;
+margin-top:10px;
+}
+
+/* SUBSCRIPTION PAGE */
+
+.plan-container{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:60px;
+}
+
+.plan-card{
+background:#111;
+padding:30px;
+width:250px;
+border-radius:10px;
+text-align:center;
+}
+
+.plan-card h2{
+color:#e50914;
+margin-bottom:15px;
+}
+
+.plan-card p{
+margin:10px 0;
+}
+
+.plan-card button{
+margin-top:15px;
+background:#e50914;
+border:none;
+padding:10px 20px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+padding:15px;
+}
+
+.logo{
+font-size:30px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero h3{
+font-size:20px;
+}
+
+.email-box input{
+width:100%;
+}
+
+.trending,
+.reasons,
+.faq,
+.plans{
+padding:30px;
+}
+
+.movie-card img{
+width:150px;
+height:220px;
+}
+
