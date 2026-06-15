@@ -1,0 +1,302 @@
+HTML------------------!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+<nav>
+
+<div class="logo">
+NETFLIX
+</div>
+
+<div class="nav-buttons">
+
+<select class="language">
+<option>English</option>
+<option>Hindi</option>
+<option>French</option>
+</select>
+
+<button class="signin-btn"
+onclick="document.getElementById('loginSection').scrollIntoView({behavior:'smooth'})">
+Sign In
+</button>
+
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1>
+Unlimited movies, TV shows and more
+</h1>
+
+<h3>
+Watch anywhere. Cancel anytime.
+</h3>
+
+<p>
+Ready to watch? Enter your email to create or restart your membership.
+</p>
+
+<div class="email-box">
+
+<input
+type="email"
+id="memberEmail"
+placeholder="Email Address">
+
+<button onclick="startMembership()">
+Get Started >
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- TRENDING -->
+
+<section class="trending">
+
+<h2>Trending Now</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Movies"
+onkeyup="searchMovie()"
+style="padding:10px;margin-bottom:20px;width:300px;">
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="money heist.png" alt="Money Heist">
+<h3>Money Heist</h3>
+</div>
+
+<div class="movie-card">
+<img src="stranger things.jpg" alt="Stranger Things">
+<h3>Stranger Things</h3>
+</div>
+
+<div class="movie-card">
+<img src="squid game.jpg" alt="Squid Game">
+<h3>Squid Game</h3>
+</div>
+
+<div class="movie-card">
+<img src="wednesday.jpg" alt="Wednesday">
+<h3>Wednesday</h3>
+</div>
+
+<div class="movie-card">
+<img src="dark.jpg" alt="Dark">
+<h3>Dark</h3>
+</div>
+
+<div class="movie-card">
+<img src="lucifer.jpg" alt="Lucifer">
+<h3>Lucifer</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- MORE REASONS -->
+
+<section class="reasons">
+
+<h2>More Reasons To Join</h2>
+
+<div class="reason-grid">
+
+<div class="reason-card">
+<h3>Enjoy on your TV</h3>
+<p>Watch on Smart TVs, PlayStation, Xbox and more.</p>
+</div>
+
+<div class="reason-card">
+<h3>Download Shows</h3>
+<p>Save your favourites easily.</p>
+</div>
+
+<div class="reason-card">
+<h3>Watch Everywhere</h3>
+<p>Stream on mobile, tablet, laptop and TV.</p>
+</div>
+
+<div class="reason-card">
+<h3>Create Profiles</h3>
+<p>Kids and adults can enjoy separately.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<button class="faq-question">What is Netflix?</button>
+<div class="faq-answer">
+Netflix is a streaming service that offers movies and TV shows.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">How much does Netflix cost?</button>
+<div class="faq-answer">
+Plans range from ₹149 to ₹649 per month.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Where can I watch?</button>
+<div class="faq-answer">
+Watch anywhere on mobile, TV or laptop.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">Can I cancel anytime?</button>
+<div class="faq-answer">
+Yes. There are no cancellation fees.
+</div>
+</div>
+
+</section>
+
+<!-- LOGIN SECTION -->
+
+<section id="loginSection"
+class="login-page">
+
+<div class="login-box">
+
+<h1>Sign In</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+Sign In
+</button>
+
+<p style="margin-top:20px;">
+Demo Login Page
+</p>
+
+</div>
+
+</section>
+
+<!-- PLANS SECTION -->
+
+<section class="plans">
+
+<h2>Choose Your Plan</h2>
+
+<div class="plan-container">
+
+<div class="plan-card">
+<h2>Mobile</h2>
+<p>₹149 / Month</p>
+<p>480p Quality</p>
+<p>1 Mobile Device</p>
+<button onclick="selectPlan('Mobile')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Basic</h2>
+<p>₹199 / Month</p>
+<p>720p HD Quality</p>
+<p>1 Device</p>
+<button onclick="selectPlan('Basic')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Standard</h2>
+<p>₹499 / Month</p>
+<p>1080p Full HD</p>
+<p>2 Devices</p>
+<button onclick="selectPlan('Standard')">
+Subscribe
+</button>
+</div>
+
+<div class="plan-card">
+<h2>Premium</h2>
+<p>₹649 / Month</p>
+<p>4K + HDR</p>
+<p>4 Devices</p>
+<button onclick="selectPlan('Premium')">
+Subscribe
+</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>Questions? Contact Us</h3>
+
+<div class="footer-links">
+
+<a href="#">Help Centre</a>
+<a href="#">Account</a>
+<a href="#">Media Centre</a>
+<a href="#">Investor Relations</a>
+<a href="#">Jobs</a>
+<a href="#">Terms of Use</a>
+<a href="#">Privacy</a>
+<a href="#">Contact Us</a>
+
+</div>
+
+<p>
+Netflix Clone Project<br>
+Customer Support: +91 123 456 7890<br>
+Email: support@netflixclone.com<br>
+&copy; 2024 Netflix Clone. All rights reserved.
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
